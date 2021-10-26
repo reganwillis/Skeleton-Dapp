@@ -5,9 +5,28 @@ let web3;
 let smartContract;
 
 // initialize web3
-// https://www.trufflesuite.com/docs/truffle/getting-started/truffle-with-metamask#using-metamask-with-ganache-cli
 const initWeb3 = () => {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
+        // TODO: document code (from metamask docs)
+        // new metamask version
+        if (typeof window.ethereum !== 'undefined') {
+            const web3 = new Web3(window.ethereum);
+            // new version has extra security
+            window.ethereum.enable().then(() => {
+                resolve(
+                    new Web3(window.ethereum));
+            }).catch(e => {
+                reject(e)
+            });
+            return;
+        }
+        // https://www.trufflesuite.com/docs/truffle/getting-started/truffle-with-metamask#using-metamask-with-ganache-cli
+        // old metamask version
+        if (typeof window.web3 !== 'undefined') {
+            return resolve(
+                new Web3(window.web3.currentProvider));
+        }
+        // no metamask version (use ganache)
         resolve(new Web3('http://localhost:8545'));
     });
 };
