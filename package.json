@@ -1,0 +1,33 @@
+{
+  "name": "skeleton_dapp",
+  "version": "1.0.0",
+  "description": "Create a working dapp with only the necessary code from start to finish.",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reganwillis/Skeleton_Dapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reganwillis/Skeleton_Dapp/issues"
+  },
+  "homepage": "https://github.com/reganwillis/Skeleton_Dapp#readme",
+  "devDependencies": {
+    "node-polyfill-webpack-plugin": "^1.1.4",
+    "webpack": "^5.59.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {
+    "web3": "^1.6.0"
+  }
+}
