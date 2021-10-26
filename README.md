@@ -6,15 +6,23 @@ Download [Truffle]() and [Ganache]() to use this project.
 TODO: add links
 
 ## Usage Instructions
-TODO: clear steps from clone -> running working server
-TODO: all npm installs
+Start by cloning the repository in a command line.
 
-1. Start the webpack dev server with "npx webpack serve"
-2. Start the local ethereum blockchain with "ganache-cli"
-3. Compile the smart contracts with "truffle compile"
-4. Deploy the smart contracts with "truffle migrate --reset"
+Start the local ethereum blockchain with this command:
 
-https://www.trufflesuite.com/docs/truffle/getting-started/truffle-with-metamask#using-metamask-with-ganache-cli
+    ganache-cli
+
+In a separate terminal, navigate to the cloned repository and compile and deploy the smart contracts with:
+
+    truffle compile
+    truffle migrate --reset
+
+To use the webpack configuration and start the server, run:
+
+    npm run build
+    npx webpack serve
+
+Open Chrome and go to http://localhost:9000/ to see the dapp. Enter an integer into the form and press submit. MetaMask will pop up. Accept the transaction to make a transaction on the local blockchain.
 
 ## Iterating on this Repo
 TODO: how to use this repo as intended, like a skeleton
@@ -113,7 +121,7 @@ Manually create these folders and files to hold the frontend:
 
 The html file should have a script tag for `main.js`, the JavaScript file that will be created by Webpack.
 
-Create and fill `webpack.config.js` as directed by [Using a Configuration]() and [NPM Scripts]() in the tutorial.
+Create and fill `webpack.config.js` as directed by [Using a Configuration](https://webpack.js.org/guides/getting-started/#using-a-configuration) and [NPM Scripts](https://webpack.js.org/guides/getting-started/#npm-scripts) in the tutorial.
 
 ### Development Server
 Start a local server to test the dapp. The below steps use the [DevServer](https://webpack.js.org/configuration/dev-server/) webpack tutorial.
@@ -132,6 +140,7 @@ The path.join contents need to match the path.resolve contents in the configurat
 
 To start the server, run:
 
+    npm run build
     npx webpack serve
 
 ### Web 3
