@@ -6,13 +6,13 @@ Download [Truffle]() and [Ganache]() to use this project.
 TODO: add links
 
 ## Usage Instructions
-Start by cloning the repository in a command line.
+Start by downloading the repository as a ZIP.
 
 Start the local ethereum blockchain with this command:
 
     ganache-cli
 
-In a separate terminal, navigate to the cloned repository and compile and deploy the smart contracts with:
+In a separate terminal, navigate to the repository and compile and deploy the smart contracts with:
 
     truffle compile
     truffle migrate --reset
@@ -27,16 +27,21 @@ Open Chrome and go to http://localhost:9000/ to see the dapp. Enter an integer i
 ## Iterating on this Repo
 TODO: how to use this repo as intended, like a skeleton
 
-template for how to write your own tests
-
-TODO: add comments in index.js showing user where to add code
-
 ### Smart Contracts
-TODO: basic info about how to create a smart contract
-TODO: maybe this should be in a seperate repo that has a smart contract
-TODO: separate repo could be pulled in using a git command
-create your own smart contract with remix (or truffle only)
-debugging with truffle: https://www.trufflesuite.com/docs/truffle/getting-started/debugging-your-contracts
+The smart contract is `SmartContract.sol` in `/contracts`. After editing the contract, run the commands:
+
+    truffle compile
+    truffle migrate --reset
+
+To test the smart contract, use the JS file in `/test`. There is a test for if the contract was properly deployed. There is also a template for how to write a simple test for smart contract methods. Use command `truffle test` to run your tests. Truffle has more documentation on [how to debug smart contracts](https://www.trufflesuite.com/docs/truffle/getting-started/debugging-your-contracts).
+
+For more information about how to write a smart contract in Solidity, [click here]().
+TODO: link to seperate repo with more info about smart contracts
+
+### Creating the Frontend
+The HTML index file is in `/dist` and the JS index file is in `/src`. Saving either of these files will refresh the server and display the changes.
+
+Any new code to interact with smart contract methods should be put in the `initApp` function.
 
 ## Deploy to Ethereum Blockchain
 TODO: instructions for how to host app on the blockchain
@@ -91,6 +96,7 @@ To compile and deploy the contract, run:
     truffle migrate --reset
 
 These folders and files are automatically generated:
+
     /build
         /contracts
             Migrations.json
