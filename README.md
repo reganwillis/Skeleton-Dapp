@@ -24,6 +24,13 @@ To use the webpack configuration and start the server, run:
 
 Open Chrome and go to http://localhost:9000/ to see the dapp. Enter an integer into the form and press submit. MetaMask will pop up. Accept the transaction to make a transaction on the local blockchain.
 
+To keep everything synced up I have found that I need to delete the contents of the build folder and rerun all the above instructions, except ganache-cli, every time I edit the smart contract. I made a windows batch file to run all these steps with one command:
+
+    run
+If this step is not done this error might occur:
+
+    Error: Returned values aren't valid, did it run Out of Gas? You might also see this error if you are not using the correct ABI for the contract you are retrieving data from, requesting data from a block number that does not exist, or querying a node which is not fully synced.
+
 ## Iterating on this Repo
 TODO: how to use this repo as intended, like a skeleton
 
