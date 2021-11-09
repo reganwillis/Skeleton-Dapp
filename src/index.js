@@ -7,10 +7,10 @@ let smartContract;
 // initialize web3
 const initWeb3 = () => {
     return new Promise((resolve, reject) => {
-        // TODO: document code (from metamask docs)
+        // https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents
         // new metamask version
         if (typeof window.ethereum !== 'undefined') {
-            const web3 = new Web3(window.ethereum);
+            web3 = new Web3(window.ethereum);
             // new version has extra security
             window.ethereum.enable().then(() => {
                 resolve(
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initWeb3().then(_web3 => {
         // initialize web3 as return from function
         web3 = _web3;
-        // initialize advanced storage contract
+        // initialize smart contract
         smartContract = initContract();
         // initialize application
         initApp();
