@@ -1,12 +1,10 @@
 # Skeleton Dapp
-This is a dapp structured to be used for development purposes. It is able to make a simple transaction on a local blockchain using [MetaMask](https://metamask.io/). It is intended to be used as a skeleton dapp to plug in your own smart contract and front end. It also uses [Truffle](), [Ganache](), [Webpack](), and [Web3JS](https://web3js.readthedocs.io/en/v1.2.11/getting-started.html).
-
-Download [Truffle]() and [Ganache]() to use this project.
-
-TODO: add links
+This is a dapp structured to be used for development purposes. It is able to make a simple transaction on a local blockchain using [MetaMask](https://metamask.io/). It is intended to be used as a skeleton dapp to plug in your own smart contract and front end. It also uses [Truffle](https://www.trufflesuite.com/truffle), [Ganache](https://www.trufflesuite.com/ganache), [Webpack](https://webpack.js.org/), and [web3.js](https://web3js.readthedocs.io/en/v1.2.11/getting-started.html).
 
 ## Usage Instructions
-Start by downloading the repository as a ZIP.
+Start by downloading all the technologies listed and linked above.
+
+Download the repository as a ZIP.
 
 Start the local ethereum blockchain with this command:
 
@@ -63,13 +61,6 @@ To add a new smart contract, create a sol file in the `/contracts` folder. Befor
 
 See the [Solidity documentation](https://docs.soliditylang.org/en/v0.8.10/) for more on how to code smart contracts.
 
-## Deploy to Ethereum Blockchain
-TODO: instructions for how to host app on the blockchain
-TODO: add code to index.js to connect to metamask instead of ganache
-
-## Hosting the Dapp on a Server
-TODO: instructions for hosting the dapp on a server and connecting to a website
-
 ## Creation Process
 These are the steps I took to create this dapp. There is more information about where code can be found and how it was created inline. My smart contract is named `SmartContract` and the naming convensions used throughout this project should be followed for new smart contracts.
 
@@ -87,7 +78,7 @@ These folders and files are automatically generated:
     /test
     truffle-config.js
 
-Add a smart contract (written in [Solidity]()) and a migration to handle deployment:
+Add a Solidity smart contract and a migration to handle deployment:
 
     /contracts
         Migrations.sol
