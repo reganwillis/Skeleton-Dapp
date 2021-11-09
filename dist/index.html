@@ -5,17 +5,17 @@
     <title>Skeleton Dapp</title>
   </head>
   <body>
-    <h1>Hello Skeleton Dapp</h1>
-    <p>enter a numerical value in the form and press submit</p>
+    <h1>Skeleton Dapp</h1>
+    <p>Enter a numerical value in the form and press INTERACT to send the value to a smart contract via the local blockchain.</p>
     <form id='setData'>
         <div>
-              <label for='setDatainput'>Data</label>
               <input id='setDataInput' type='number'></input>
         </div>
-        <button type='submit'>Submit</button>  
+        <button type='submit'>INTERACT</button>  
     </form>
     <div>
-        Data: <span id='data'></span>
+        <p>Use MetaMask to confirm the interaction to get the same data back from the smart contract and display below.</p>
+        Value retrieved from smart contract: <span id='data'></span>
     </div>
     <script src="main.js"></script>
   </body>
